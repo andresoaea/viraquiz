@@ -1,0 +1,402 @@
+/* Viraquiz Plugin - Admin Area CSS */
+body {
+  overflow-x: hidden;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.chart-container {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.vrq-chart-container {
+  width: 60%;
+  float: left;
+}
+
+.vrq-canvas-holder {
+  width: 40%;
+  float: left;
+  margin-top: 3vw;
+}
+
+.vrq-panel {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.vrq-panel .vrq-panel-header {
+  color: #fff;
+  background-color: #606A76;
+  padding: 10px 20px;
+  border-radius: 4px 4px 0 0;
+  font-size: 15px;
+}
+.vrq-panel .vrq-panel-body {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.vrq-stats-box {
+  border-radius: 8px;
+  width: 31.2%;
+  padding: 10px;
+  min-width: 260px;
+  float: left;
+}
+.vrq-stats-box .vrq-stats-box-left-col {
+  background-color: #606A76;
+  float: left;
+  color: #fff;
+  width: 120px;
+  height: 100px;
+  border-radius: 6px 0 0 6px;
+}
+.vrq-stats-box .vrq-stats-box-left-col span {
+  position: relative;
+  font-size: 78px;
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+.vrq-stats-box .vrq-stats-box-right-col {
+  float: left;
+  border: 1px solid #606A76;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  width: calc( 100% - 121px );
+  height: 98px;
+}
+.vrq-stats-box .vrq-stats-box-right-col p {
+  text-align: center;
+  margin: 0;
+}
+.vrq-stats-box .vrq-stats-box-right-col p.vrq-stats-number {
+  font-size: 27px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.vrq-stats-box .vrq-stats-box-right-col p.num-users {
+  color: #FFC100;
+}
+.vrq-stats-box .vrq-stats-box-right-col p.num-results {
+  color: #36A2EB;
+}
+.vrq-stats-box .vrq-stats-box-right-col p.num-shares {
+  color: #E40641;
+}
+
+.vrq-full-column {
+  width: 100%;
+}
+.vrq-full-column .vrq-recent-activity {
+  float: left;
+  width: 57%;
+  padding-right: 3%;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container {
+  height: 400px;
+  padding-top: 5px;
+  overflow-y: scroll;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item:last-child {
+  border: none;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .vrq-activity-col {
+  float: left;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .activity-first-col {
+  width: 10%;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .activity-first-col img {
+  border-radius: 50%;
+  position: relative;
+  margin-top: 5px;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.6);
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .activity-second-col {
+  width: 60%;
+  min-width: 60px;
+  text-align: center;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .activity-second-col span.user-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 20px;
+  color: #606A76;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .activity-second-col span.action {
+  color: #fff;
+  padding: 5px 12px;
+  margin-left: 12px;
+  border-radius: 5px;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .activity-second-col span.action.shared {
+  background-color: #E40641;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .activity-second-col span.action.did_quiz {
+  background-color: #36A2EB;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .activity-second-col p.quiz-title {
+  font-size: 15px;
+  margin-top: 8px;
+  margin: 8px 22px;
+  font-style: italic;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .activity-second-col p.date-time {
+  position: relative;
+  top: -8px;
+  font-size: 12px;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .activity-second-col p.date-time span {
+  position: relative;
+  top: -1px;
+  margin-left: 12px;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .activity-second-col p.date-time span:first-child {
+  margin-left: 0;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .activity-third-col {
+  width: 30%;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item .activity-third-col img {
+  width: 90%;
+  height: 100px;
+  border-radius: 4px;
+}
+.vrq-full-column .vrq-recent-activity .vrq-panel .vrq-panel-body .vrq-recent-activity-items-container .vrq-activity-item:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.vrq-full-column .vrq-quizzes-shares {
+  float: left;
+  width: 40%;
+}
+
+.vrq-quizzes-shares .vrq-panel .vrq-panel-body .vrq-viral-items-container {
+  height: 400px;
+  padding-top: 5px;
+  overflow-y: scroll;
+}
+.vrq-quizzes-shares .vrq-panel .vrq-panel-body .vrq-viral-items-container .vrq-viral-item {
+  position: relative;
+  width: 96%;
+  overflow: hidden;
+}
+.vrq-quizzes-shares .vrq-panel .vrq-panel-body .vrq-viral-items-container .vrq-viral-item img {
+  width: 100%;
+  height: auto;
+}
+.vrq-quizzes-shares .vrq-panel .vrq-panel-body .vrq-viral-items-container .vrq-viral-item .vrq-viral-item-overlay {
+  position: absolute;
+  width: 100%;
+  height: 98%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.vrq-quizzes-shares .vrq-panel .vrq-panel-body .vrq-viral-items-container .vrq-viral-item .vrq-viral-item-overlay h2, .vrq-quizzes-shares .vrq-panel .vrq-panel-body .vrq-viral-items-container .vrq-viral-item .vrq-viral-item-overlay h3, .vrq-quizzes-shares .vrq-panel .vrq-panel-body .vrq-viral-items-container .vrq-viral-item .vrq-viral-item-overlay h4 {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0 20px;
+  padding-bottom: 20px;
+}
+.vrq-quizzes-shares .vrq-panel .vrq-panel-body .vrq-viral-items-container .vrq-viral-item .vrq-viral-item-overlay h2 {
+  color: #E40641;
+  font-size: 30px;
+  margin-top: 7%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.vrq-quizzes-shares .vrq-panel .vrq-panel-body .vrq-viral-items-container .vrq-viral-item .vrq-viral-item-overlay h3 {
+  color: #9e032d;
+}
+.vrq-quizzes-shares .vrq-panel .vrq-panel-body .vrq-viral-items-container .vrq-viral-item .vrq-viral-item-overlay h4 {
+  padding-top: 15px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.viraquiz-admin-header {
+  position: relative;
+  top: -17px;
+  left: -20px;
+  background-color: #606A76;
+  color: #fff;
+  width: calc(100% + 20px);
+  padding: 20px 20px 0 20px;
+  border-bottom: 2px solid #dde0e4;
+}
+.viraquiz-admin-header h1, .viraquiz-admin-header h3 {
+  color: #fff;
+}
+.viraquiz-admin-header h1.plugin-name, .viraquiz-admin-header h3.plugin-name {
+  font-size: 35px;
+}
+.viraquiz-admin-header h3.plugin-description span {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: initial;
+}
+.viraquiz-admin-header img.viraquiz-logo {
+  width: 140px;
+  float: left;
+  margin: 10px 20px 15px 0;
+}
+.viraquiz-admin-header ul.vrq-admin-menu {
+  position: absolute;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  margin-bottom: 0;
+  bottom: -6px;
+  right: 60px;
+}
+.viraquiz-admin-header ul.vrq-admin-menu li {
+  background-color: #F48C01;
+  float: left;
+  box-shadow: inset 1px 0 0 0 #a2a2a2;
+  font-size: 16px;
+  letter-spacing: 0.6px;
+}
+.viraquiz-admin-header ul.vrq-admin-menu li a {
+  display: inline-block;
+  padding: 15px 10px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: inherit;
+}
+.viraquiz-admin-header ul.vrq-admin-menu li a:hover, .viraquiz-admin-header ul.vrq-admin-menu li a:focus {
+  background-color: #d27a04;
+}
+.viraquiz-admin-header ul.vrq-admin-menu li a.vrq-menu-active {
+  box-shadow: inset 0 -5px 0 0 #751c01;
+  background-color: #C93E14;
+  font-weight: bold;
+}
+
+.vrq-panel.vrq-fb-app-config input[type='text'], .vrq-panel.vrq-translation-panel input[type='text'] {
+  width: 50%;
+}
+
+/* Toggle button - https://codepen.io/mallendeo/pen/eLIiG */
+.tgl {
+  display: none !important;
+}
+.tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.tgl-ios + .tgl-btn {
+  background: #fbfbfb;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all .4s ease;
+  border: 1px solid #e8eae9;
+}
+.tgl-ios + .tgl-btn:after {
+  border-radius: 2em;
+  background: #fbfbfb;
+  transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+.tgl-ios + .tgl-btn:hover:after {
+  will-change: padding;
+}
+.tgl-ios + .tgl-btn:active {
+  box-shadow: inset 0 0 0 2em #e8eae9;
+}
+.tgl-ios + .tgl-btn:active:after {
+  padding-right: .8em;
+}
+.tgl-ios:checked + .tgl-btn {
+  background: #86d993;
+}
+.tgl-ios:checked + .tgl-btn:active {
+  box-shadow: none;
+}
+.tgl-ios:checked + .tgl-btn:active:after {
+  margin-left: -.8em;
+}
+
+/* Media Quieries */
+@media screen and (max-width: 819px) {
+  .wrap {
+    width: calc(100% + 30px);
+  }
+
+  .vrq-admin-menu {
+    display: none;
+  }
+
+  .vrq-chart-container, .vrq-canvas-holder {
+    width: 100%;
+    float: none;
+  }
+
+  .chart-container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .vrq-full-column .vrq-recent-activity, .vrq-full-column .vrq-quizzes-shares {
+    width: 100%;
+    float: none;
+  }
+}
+@media screen and (max-width: 519px) {
+  .vrq-full-column .vrq-recent-activity .vrq-recent-activity-items-container .vrq-activity-item .activity-second-col {
+    width: 90% !important;
+  }
+  .vrq-full-column .vrq-recent-activity .vrq-recent-activity-items-container .vrq-activity-item .activity-third-col {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=viraquiz-admin.css.map */

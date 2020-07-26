@@ -1,0 +1,22 @@
+{
+    "name": "andresoaea/viraquiz",
+    "description": "Viraquiz - Viral Facebook apps / quizzes",
+    "type": "wordpress-plugin",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Constantin Andresoaea",
+            "email": "constantin.andresoaea@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "intervention/image": "^2.4",
+        "facebook/graph-sdk": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Inc\\": "inc/"
+        }
+    }
+}

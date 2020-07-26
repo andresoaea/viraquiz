@@ -1,0 +1,500 @@
+/* Viraquiz Plugin - Admin Area CSS */
+
+body {
+	overflow-x: hidden;
+}
+
+
+.clearfix {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+canvas {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.chart-container {
+	//width: 500px;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-bottom: 40px;
+}
+
+
+.vrq-chart-container {
+	width:60%; 
+	float:left;
+}
+
+.vrq-canvas-holder {
+	width:40%; 
+	float:left;
+	margin-top: 3vw;
+}
+
+
+.vrq-panel {
+	width: 100%;
+	margin-bottom: 30px;
+	
+	.vrq-panel-header {
+		color: #fff;
+		background-color: #606A76;
+		padding: 10px 20px;
+		border-radius: 4px 4px 0 0;
+		font-size: 15px;
+
+	}
+
+	.vrq-panel-body {
+		background-color: #fff;
+		padding: 20px;
+	}
+
+
+}
+
+
+.vrq-stats-box {
+	border-radius: 8px;
+	width: 31.2%;
+	padding: 10px;
+	min-width: 260px;
+	float: left;
+
+	.vrq-stats-box-left-col {
+		background-color: #606A76;
+		float: left;
+	    color: #fff;
+	  	width: 120px;
+	  	height: 100px;
+	    border-radius: 6px 0 0 6px;
+
+		span {
+		    position: relative;
+		    font-size: 78px;
+		    position: relative;
+		    top: 10px;
+		    left: 20px;
+		}
+	}
+
+	.vrq-stats-box-right-col {
+		float: left;
+		border: 1px solid #606A76;
+		border-left: none;
+		border-radius: 0 6px 6px 0;
+	    width: calc( 100% - 121px );
+   	    height: 98px;
+
+   	    p {
+   	    	text-align: center;
+   	    	margin: 0;
+
+   	    	&.vrq-stats-number {
+   	    		font-size: 27px;
+   	    		font-weight: bold;
+   	    		margin-top: 15px;
+   	    	}
+
+	   	    &.num-users { color: #FFC100; }
+	   	    &.num-results { color: #36A2EB; }
+	   	    &.num-shares { color: #E40641; }
+   	    }
+
+
+	}
+
+
+}
+
+
+.vrq-full-column {
+	width: 100%;
+
+	.vrq-recent-activity {
+		float: left;
+		width: 57%;
+		padding-right: 3%;
+		
+
+
+		.vrq-panel .vrq-panel-body .vrq-recent-activity-items-container {
+			height: 400px;
+			padding-top: 5px;
+			overflow-y: scroll;
+
+			.vrq-activity-item {
+				margin-bottom: 20px;
+				border-bottom: 1px solid #eee;
+				padding-bottom: 10px;
+				width: 100%;
+
+				&:last-child { border: none; }
+
+				.vrq-activity-col { float: left; }
+
+				.activity-first-col {
+					width: 10%;
+					//background-color: red;
+
+					img { 
+						border-radius: 50%; 
+						position: relative; 
+						margin-top: 5px; 
+						-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.6);
+						-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.6);
+						box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.6);
+					}
+				}
+
+				.activity-second-col {
+					width: 60%;
+					min-width: 60px;
+					text-align: center;
+
+					span.user-name {
+						font-weight: bold;
+						font-size: 16px;
+						margin-left: 20px;
+						color: #606A76;
+					}
+
+					span.action {
+						color: #fff;
+					    padding: 5px 12px;
+					    margin-left: 12px;
+					    border-radius: 5px;
+
+						&.shared { background-color: #E40641; }
+						&.did_quiz { background-color: #36A2EB; }
+
+					}
+
+					p.quiz-title {
+						font-size: 15px;
+					    margin-top: 8px;
+					    margin: 8px 22px;
+					    font-style: italic;
+					}
+
+					p.date-time {
+						position: relative;
+					    top: -8px;
+					    font-size: 12px;
+
+					    span {
+					    	position: relative;
+					    	top: -1px;
+						    margin-left: 12px;
+
+						    &:first-child { margin-left: 0; }
+					    }
+					}
+
+				}
+
+				.activity-third-col {
+					width: 30%;
+					img {
+						width: 90%;
+						height: 100px;
+						border-radius: 4px;
+
+					}
+				}
+
+				&:after {
+					content: "";
+					display: block;
+					clear: both;
+				}
+
+			}
+
+		}
+
+
+	}
+
+	.vrq-quizzes-shares {
+		float: left;
+		width: 40%;
+	}
+
+}
+
+
+
+.vrq-quizzes-shares .vrq-panel .vrq-panel-body {
+
+	.vrq-viral-items-container {
+
+		height: 400px;
+		padding-top: 5px;
+		overflow-y: scroll;
+
+
+		.vrq-viral-item {
+			position: relative;
+			width: 96%;
+			overflow: hidden;
+
+			img { width: 100%; height: auto; }
+
+			.vrq-viral-item-overlay {
+				position: absolute;
+			    width: 100%;
+			    height: 98%;
+			    text-align: center;
+			    background-color: rgba(0,0,0,0.3);
+
+			    h2,h3,h4 { background-color: rgba(255,255,255,0.7); margin: 0 20px; padding-bottom: 20px; }
+
+			    h2 { color: #E40641; font-size: 30px; margin-top: 7%; padding-top: 15px; padding-bottom: 10px; }
+			    h3 { color: #9e032d; }
+			    h4 { padding-top: 15px; background-color: rgba(255,255,255,0.95); }
+			}
+
+		}
+
+
+	}
+
+
+}
+
+
+.viraquiz-admin-header {
+	position: relative;
+	top: -17px;
+	left: -20px;
+	background-color: #606A76;
+	color: #fff;
+	width: calc(100% + 20px);
+	padding: 20px 20px 0 20px;
+	border-bottom: 2px solid #dde0e4;
+
+	h1,h3 {
+		color: #fff;
+
+		&.plugin-name {
+			font-size: 35px;
+		}
+	}
+
+
+	h3.plugin-description span {
+		font-size: 14px;
+		font-style: italic;
+		font-weight: initial;
+	}
+
+
+
+
+	img.viraquiz-logo {
+		width: 140px;
+	    float: left;
+	    margin: 10px 20px 15px 0;
+	}
+
+	ul.vrq-admin-menu {
+		position: absolute;
+		border-radius: 4px 4px 0 0;
+		overflow: hidden;
+	    margin-bottom: 0;
+	    bottom: -6px;
+    	right: 60px;
+
+		li {
+			background-color: #F48C01;
+			float: left;
+			box-shadow: inset 1px 0 0 0 #a2a2a2;
+			font-size: 16px;
+   		    letter-spacing: 0.6px;
+
+
+			a {
+				display: inline-block;
+				padding: 15px 10px;
+				color: #fff;
+				font-size: 14px;
+				text-decoration: none;
+				font-family: inherit;
+
+				&:hover, &:focus {
+					background-color: #d27a04;
+				}
+
+				&.vrq-menu-active {
+					box-shadow: inset 0 -5px 0 0 #751c01;
+					background-color: #C93E14;
+					font-weight: bold;
+
+				}
+
+
+			}
+
+		}
+	}
+}
+
+.vrq-panel.vrq-fb-app-config, .vrq-panel.vrq-translation-panel {
+	input[type='text'] {
+		width: 50%;
+	}
+}
+
+
+/* Toggle button - https://codepen.io/mallendeo/pen/eLIiG */
+.tgl {
+
+	display: none !important;
+
+	&,
+	&:after,
+	&:before,
+	& *,
+	& *:after,
+	& *:before,
+	& + .tgl-btn {
+		box-sizing: border-box;
+		&::selection {
+			background: none;
+		}
+	}
+
+	+ .tgl-btn {
+		outline: 0;
+		display: block;
+		width: 4em;
+		height: 2em;
+		position: relative;
+		cursor: pointer;
+		user-select: none;
+		&:after,
+		&:before {
+			position: relative;
+			display: block;
+			content: "";
+			width: 50%;
+			height: 100%;
+		}
+
+		&:after {
+			left: 0;
+		}
+
+		&:before {
+			display: none;
+		}
+	}
+
+	&:checked + .tgl-btn:after {
+		left: 50%;
+	}
+}
+
+.tgl-ios {
+	+ .tgl-btn {
+		background: #fbfbfb;
+		border-radius: 2em;
+		padding: 2px;
+		transition: all .4s ease;
+		border: 1px solid #e8eae9;
+		&:after {
+			border-radius: 2em;
+			background: #fbfbfb;
+			transition:
+			left .3s cubic-bezier(
+				0.175, 0.885, 0.320, 1.275
+				),
+			padding .3s ease, margin .3s ease;
+			box-shadow:
+			0 0 0 1px rgba(0,0,0,.1),
+			0 4px 0 rgba(0,0,0,.08);
+		}
+
+		&:hover:after {
+			will-change: padding;
+		}
+
+		&:active {
+			box-shadow: inset 0 0 0 2em #e8eae9;
+			&:after {
+				padding-right: .8em;
+			}
+		}
+	}
+
+	&:checked + .tgl-btn {
+		background: #86d993;
+		&:active {
+			box-shadow: none;
+			&:after {
+				margin-left: -.8em;
+			}
+		}
+	}
+}
+
+
+
+/* Media Quieries */
+@media screen and ( max-width: 819px ) {
+	.wrap {
+		width: calc(100% + 30px);
+	}
+
+	.vrq-admin-menu {
+		display: none;
+	}
+
+	.vrq-chart-container, .vrq-canvas-holder {
+		width: 100%;
+		float: none;
+	}
+
+	.chart-container {
+		margin-left: 0;
+   	    margin-right: 0; 
+        margin-bottom: 0; 
+	}
+
+
+	.vrq-full-column {
+		.vrq-recent-activity, .vrq-quizzes-shares {
+			width: 100%;
+			float: none;
+		}
+
+	}
+
+
+}
+
+
+
+@media screen and ( max-width: 519px ) {
+	.vrq-full-column .vrq-recent-activity {
+		.vrq-recent-activity-items-container .vrq-activity-item {
+			.activity-second-col {
+				width: 90% !important;
+			}
+
+			.activity-third-col {
+				display: none;
+			}		
+		}
+
+
+	}
+}		

@@ -1,0 +1,659 @@
+/*
+
+Plugin Name: Viraquiz - Viral Facebook quizzes / apps
+
+TABLE OF CONTENTS 
+
+1. Reset
+2. Generic CSS
+3. Single Quiz Page
+4. Homepage
+5. Preloader
+6. Media Queries
+
+*/
+/* 1. Reset */
+.viraquiz-reset div,
+.viraquiz-reset span,
+.viraquiz-reset applet,
+.viraquiz-reset object,
+.viraquiz-reset iframe,
+.viraquiz-reset h1,
+.viraquiz-reset h2,
+.viraquiz-reset h3,
+.viraquiz-reset h4,
+.viraquiz-reset h5,
+.viraquiz-reset h6,
+.viraquiz-reset p,
+.viraquiz-reset blockquote,
+.viraquiz-reset pre,
+.viraquiz-reset a,
+.viraquiz-reset abbr,
+.viraquiz-reset acronym,
+.viraquiz-reset address,
+.viraquiz-reset big,
+.viraquiz-reset cite,
+.viraquiz-reset code,
+.viraquiz-reset del,
+.viraquiz-reset dfn,
+.viraquiz-reset em,
+.viraquiz-reset img,
+.viraquiz-reset ins,
+.viraquiz-reset kbd,
+.viraquiz-reset q,
+.viraquiz-reset s,
+.viraquiz-reset samp,
+.viraquiz-reset small,
+.viraquiz-reset strike,
+.viraquiz-reset strong,
+.viraquiz-reset sub,
+.viraquiz-reset sup,
+.viraquiz-reset tt,
+.viraquiz-reset var,
+.viraquiz-reset b,
+.viraquiz-reset u,
+.viraquiz-reset i,
+.viraquiz-reset center,
+.viraquiz-reset dl,
+.viraquiz-reset dt,
+.viraquiz-reset dd,
+.viraquiz-reset ol,
+.viraquiz-reset ul,
+.viraquiz-reset li,
+.viraquiz-reset fieldset,
+.viraquiz-reset form,
+.viraquiz-reset label,
+.viraquiz-reset legend,
+.viraquiz-reset table,
+.viraquiz-reset caption,
+.viraquiz-reset tbody,
+.viraquiz-reset tfoot,
+.viraquiz-reset thead,
+.viraquiz-reset tr,
+.viraquiz-reset th,
+.viraquiz-reset td,
+.viraquiz-reset article,
+.viraquiz-reset aside,
+.viraquiz-reset canvas,
+.viraquiz-reset details,
+.viraquiz-reset embed,
+.viraquiz-reset figure,
+.viraquiz-reset figcaption,
+.viraquiz-reset footer,
+.viraquiz-reset header,
+.viraquiz-reset hgroup,
+.viraquiz-reset menu,
+.viraquiz-reset nav,
+.viraquiz-reset output,
+.viraquiz-reset ruby,
+.viraquiz-reset section,
+.viraquiz-reset summary,
+.viraquiz-reset time,
+.viraquiz-reset mark,
+.viraquiz-reset audio,
+.viraquiz-reset video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    text-transform: none;
+    text-decoration: none;
+}
+.viraquiz-reset button {
+    margin: 0;
+}
+.viraquiz-reset article,
+.viraquiz-reset aside,
+.viraquiz-reset details,
+.viraquiz-reset figcaption,
+.viraquiz-reset figure,
+.viraquiz-reset footer,
+.viraquiz-reset header,
+.viraquiz-reset hgroup,
+.viraquiz-reset menu,
+.viraquiz-reset nav,
+.viraquiz-reset section {
+    display: block;
+}
+.viraquiz-reset body {
+    line-height: 1;
+}
+.viraquiz-reset ol,
+.viraquiz-reset ul {
+    list-style: none;
+}
+.viraquiz-reset table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 2. Generic CSS */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.viraquiz-full-width {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+}
+
+.vrq-clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.vrq-spin {
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* 3. Single Quiz Page */
+.viraquiz-container {
+    width: 86% !important;
+    width: 96%;
+    margin: 30px auto;
+}
+.viraquiz-container .viraquiz-main-column {
+    float: left;
+    width: calc(97% - 300px);
+    margin-right: 3%;
+}
+.viraquiz-container .viraquiz-main-column .quiz-content {
+    background-color: #eee;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+}
+.viraquiz-container .viraquiz-main-column .quiz-content h1.quiz-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.viraquiz-container .viraquiz-main-column .quiz-content img.quiz-image {
+    display: block;
+    margin: 15px auto 20px auto;
+    max-width: 100%;
+    width: 70%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 2px;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .continue-with-facebook {
+    padding: 8px 26px 0 26px;
+    background-color: #2d5ab8;
+    font-size: 21px;
+    border: none;
+    border-radius: 32px;
+    color: #fff;
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-transition: background-color 420ms ease;
+    -moz-transition: background-color 420ms ease;
+    -ms-transition: background-color 420ms ease;
+    -o-transition: background-color 420ms ease;
+    transition: background-color 420ms ease;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .continue-with-facebook:hover,
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .continue-with-facebook:focus {
+    background-color: #1e438f;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .continue-with-facebook
+    span.dashicons {
+    position: relative;
+    font-size: 45px;
+    top: -1px;
+    left: -16px;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .continue-with-facebook.vrq-share-fb-btn {
+    margin-top: 20px;
+    border-radius: 4px;
+    padding: 10px 30px 10px 30px;
+    font-size: 18px;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .continue-with-facebook.vrq-share-fb-btn:hover,
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .continue-with-facebook.vrq-share-fb-btn:focus {
+    background-color: #1e438f;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .continue-with-facebook.vrq-share-fb-btn
+    span.dashicons {
+    font-size: 34px;
+    position: relative;
+    top: 2px;
+    margin-right: 15px;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .continue-with-facebook.vrq-share-fb-btn
+    span.vrq-share-text {
+    position: relative;
+    top: -6px;
+    font-weight: bold;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .continue-with-facebook
+    span.continue-fb-text {
+    position: relative;
+    line-height: 1.3;
+    font-size: 19px;
+    top: -15px;
+    left: 4px;
+}
+.viraquiz-container .viraquiz-main-column .quiz-content a.viraquiz-try-again {
+    margin-top: 20px;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    a.viraquiz-try-again:before {
+    content: '';
+    display: block;
+    clear: both;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    a.viraquiz-try-again
+    button {
+    padding: 10px 20px 13px 20px;
+    margin-top: 25px;
+    border: 2px solid #2ae071;
+    color: #2ae071;
+    font-size: 18px;
+    background-color: transparent;
+    -webkit-transition: all 420ms ease;
+    -moz-transition: all 420ms ease;
+    -ms-transition: all 420ms ease;
+    -o-transition: all 420ms ease;
+    transition: all 420ms ease;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    a.viraquiz-try-again
+    button:hover,
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    a.viraquiz-try-again
+    button:focus {
+    background-color: #2ae071;
+    color: #fff;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    a.viraquiz-try-again
+    button
+    span.dashicons {
+    position: relative;
+    top: 3px;
+    margin-right: 12px;
+}
+.viraquiz-container .viraquiz-main-column .quiz-content .vrq-shared-page {
+    width: 100%;
+}
+.viraquiz-container .viraquiz-main-column .quiz-content .vrq-shared-page img {
+    margin: 0 auto;
+}
+.viraquiz-container .viraquiz-main-column .quiz-content .vrq-shared-page h3 {
+    margin-top: 20px;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .vrq-shared-page
+    button {
+    margin: 20px 0 15px 0;
+    color: #fff;
+    background-color: #0b2769;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 20px 15px 15px;
+    font-size: 14px;
+    opacity: 0.9;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.31);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.31);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.31);
+    -webkit-transition: opacity 420ms ease;
+    -moz-transition: opacity 420ms ease;
+    -ms-transition: opacity 420ms ease;
+    -o-transition: opacity 420ms ease;
+    transition: opacity 420ms ease;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .vrq-shared-page
+    button
+    span {
+    position: relative;
+    top: 2px;
+    margin-bottom: -4px;
+}
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .vrq-shared-page
+    button:hover,
+.viraquiz-container
+    .viraquiz-main-column
+    .quiz-content
+    .vrq-shared-page
+    button:focus {
+    opacity: 1;
+}
+.viraquiz-container .viraquiz-main-column .more-quizzes {
+    text-align: center;
+    margin: 30px -1% 30px -1%;
+}
+.viraquiz-container .viraquiz-main-column .more-quizzes .more-quizzes-text {
+    margin: 40px 0 20px 0;
+}
+.viraquiz-container .viraquiz-main-column .more-quizzes .vrq-single-quiz {
+    width: 48%;
+}
+.viraquiz-container .viraquiz-sidebar {
+    float: left;
+    width: 300px;
+    overflow: hidden;
+    margin: 0;
+}
+.viraquiz-container .viraquiz-sidebar > aside,
+.viraquiz-container .viraquiz-sidebar > div,
+.viraquiz-container .viraquiz-sidebar > section {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    margin: 0 !important;
+}
+
+.viraquiz-result-image,
+.viraquiz-result-actions {
+    display: none;
+}
+
+.viraquiz-preloader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 12%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.93);
+    z-index: 999999;
+}
+.viraquiz-preloader h3.vrq-preloader-msg {
+    margin: 0 20px;
+}
+.viraquiz-preloader h3.vrq-preloader-msg span {
+    color: #2d5ab8;
+}
+
+.viraquiz-result-preloader {
+    width: 100%;
+    min-height: 400px;
+    text-align: center;
+}
+
+/* 4. Homepage */
+.viraquiz-container.vrq-homepage-container {
+    text-align: center;
+}
+.viraquiz-container .vrq-page-limit {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.viraquiz-container .vrq-page-limit.vrq-ajax-loaded-quizzes > .vrq-single-quiz {
+    display: none;
+}
+.viraquiz-container .vrq-single-quiz {
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    width: 31.33%;
+    background-color: #fff;
+    text-align: center;
+    float: left;
+    margin: 0 1% 20px 1%;
+    border-radius: 2px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.31);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.31);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.31);
+}
+.viraquiz-container .vrq-single-quiz:hover .vrq-quiz-overlay,
+.viraquiz-container .vrq-single-quiz:focus .vrq-quiz-overlay {
+    opacity: 1;
+}
+.viraquiz-container .vrq-single-quiz .vrq-quiz-overlay {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    -webkit-transition: opacity 420ms ease;
+    -moz-transition: opacity 420ms ease;
+    -ms-transition: opacity 420ms ease;
+    -o-transition: opacity 420ms ease;
+    transition: opacity 420ms ease;
+}
+.viraquiz-container .vrq-single-quiz .vrq-quiz-overlay span {
+    position: relative;
+    top: 42%;
+    color: #fff;
+    font-size: 20px;
+    background-color: #ffa200;
+    padding: 13px 23px 13px 23px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.viraquiz-container .vrq-single-quiz img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+.viraquiz-container .vrq-single-quiz h1 {
+    padding: 10px 5px 11px 5px;
+    line-height: 1.2;
+}
+.viraquiz-container .vrq-single-quiz h1 a {
+    color: #000;
+    opacity: 0.7;
+    font-size: 21px;
+}
+.viraquiz-container .vrq-load-more-quizzes-btn {
+    font-size: 20px;
+    border: none;
+    padding-top: 18px;
+    background-color: #254b61;
+    color: #fff !important;
+    margin-top: 10px;
+    border-radius: 4px;
+    opacity: 0.9;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.67);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.67);
+    -webkit-transition: opacity 420ms ease;
+    -moz-transition: opacity 420ms ease;
+    -ms-transition: opacity 420ms ease;
+    -o-transition: opacity 420ms ease;
+    transition: opacity 420ms ease;
+}
+.viraquiz-container .vrq-load-more-quizzes-btn:hover {
+    opacity: 1;
+}
+.viraquiz-container .vrq-load-more-quizzes-btn.vrq-loading {
+    pointer-events: none;
+}
+.viraquiz-container .vrq-load-more-quizzes-btn span.dashicons {
+    margin-right: 8px;
+    position: relative;
+    top: -2px;
+}
+.viraquiz-container .vrq-load-more-quizzes-btn span.vrq-load-more-text {
+    position: relative;
+    top: -5px;
+}
+
+.vrq-ads-space {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+}
+.vrq-ads-space.vrq-below-quiz-content-ads-space {
+    margin-top: 25px;
+}
+.vrq-ads-space h2.vrq-ads-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* 5. Preloader : https://codepen.io/srekoble/pen/WQZMzY */
+.vrq-pixel-loader {
+    width: 10px;
+    height: 10px;
+    background: #f35626;
+    color: #f35626;
+    margin: 80px auto !important;
+    box-shadow: 15px 15px 0 0, -15px -15px 0 0, 15px -15px 0 0, -15px 15px 0 0,
+        0 15px 0 0, 15px 0 0 0, -15px 0 0 0, 0 -15px 0 0;
+    animation: anim 2s linear infinite;
+}
+
+@keyframes anim {
+    0% {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    50% {
+        box-shadow: 20px 20px 0 0, -20px -20px 0 0, 20px -20px 0 0,
+            -20px 20px 0 0, 0 10px 0 0, 10px 0 0 0, -10px 0 0 0, 0 -10px 0 0;
+    }
+    75% {
+        box-shadow: 20px 20px 0 0, -20px -20px 0 0, 20px -20px 0 0,
+            -20px 20px 0 0, 0 10px 0 0, 10px 0 0 0, -10px 0 0 0, 0 -10px 0 0;
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-filter: hue-rotate(360deg);
+    }
+}
+/* 6. Media Queries */
+@media screen and (max-width: 1049px) {
+    .viraquiz-container {
+        width: 96% !important;
+    }
+}
+@media screen and (max-width: 799px) {
+    .viraquiz-container .vrq-single-quiz {
+        width: 48%;
+    }
+    .viraquiz-container .viraquiz-main-column {
+        width: 90%;
+        float: none;
+        margin-right: 0;
+        margin: 0 auto;
+    }
+    .viraquiz-container .viraquiz-sidebar {
+        max-width: 100%;
+        margin: 0 auto;
+        float: none;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .viraquiz-container .vrq-single-quiz {
+        width: 100%;
+    }
+    .viraquiz-container .vrq-load-more-quizzes-btn span.vrq-load-more-text {
+        top: -6px;
+        font-size: 15px;
+    }
+    .viraquiz-container .viraquiz-main-column {
+        width: 98%;
+    }
+    .viraquiz-container
+        .viraquiz-main-column
+        .quiz-content
+        .continue-with-facebook
+        span.continue-fb-text {
+        font-size: 15px;
+        top: -16px;
+    }
+    .viraquiz-container
+        .viraquiz-main-column
+        .quiz-content
+        .continue-with-facebook.vrq-share-fb-btn {
+        padding: 5px 15px 5px 25px;
+        font-size: 14px;
+    }
+    .viraquiz-container
+        .viraquiz-main-column
+        .quiz-content
+        .continue-with-facebook.vrq-share-fb-btn
+        span.vrq-share-text {
+        top: -8px;
+    }
+    .viraquiz-container
+        .viraquiz-main-column
+        .quiz-content
+        a.viraquiz-try-again
+        button {
+        padding: 8px 12px 7px 12px;
+        font-size: 14px;
+    }
+    .viraquiz-container .viraquiz-main-column .more-quizzes .vrq-single-quiz {
+        width: 100%;
+    }
+}
+
+/*# sourceMappingURL=viraquiz.css.map */
