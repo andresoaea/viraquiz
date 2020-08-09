@@ -1,4 +1,5 @@
 ### ViraQuiz - A plugin that turns a Wordpress site into a quizzes website with Facebook login
+###### Created: 12 2018
 
 Features:
 
@@ -6,4 +7,8 @@ Features:
 -   Drag&drop quiz builder in administration area
 -   Website statistics - activity, shares, etc
 
-###### Plugin creation date: 12 2018
+
+#### Screenshots
+
+![](https://i.imgur.com/K1bbuFp.jpg)
+![](https://i.imgur.com/A8CZ0a6.png)
